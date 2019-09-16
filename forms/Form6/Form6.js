@@ -1,39 +1,3 @@
-let bedroomCount = 1
-let x = 1
-let y = 1
-let roomArray = []
-
-let intro = prompt("Are you ready to face the challenges of The Big Adventure?")
-let name = prompt("What is your name?")
-alert (`Welcome to the big adventure, ${name}.`)
-alert ("Your mission is to visit all six rooms in this house: the living room, the kitchen, the game room, the master bedroom, the bathroom, and the closet.")
-alert ("Once you visit all six rooms, you win. Beware, you will only have 6 moves to win, or you will lose the game.")
-alert ("Each room is 5 yards wide and 10 yards tall. You will start in the southwest corner of the house.")
-alert ("You are now in the living room, which is south of the closet and west of the kitchen. Follow the instructions to make your first move out of the living room.")
-let direction = prompt("Welcome to the living room! Which direction do you want to move (north, east, south, or west)")
-let units = Number(prompt("How many yards do you want to move?"))
-
-if (direction == 'north') {
-   y = (y + units)
-} else if (direction == 'east') {
-   x = (x + units)
-} else if (direction == 'south') {
-  y = (y - units)
-} else if (direction == 'west') {
-  x = (x - units)
-}
-
-if (x < 0 || x > 15) {
-  alert("oopsies, you went too far and ran into the wall!")
-  x = (x - units)
-}
-
-//this makes sure that the player remains within the eastern and western walls
-if (y < 0 || y > 15) {
-  alert("oopsies, you went too far and ran into the wall!")
-  y = (y - units)
-}
-
 switch (bedroomCount) {
 
   case 6:
@@ -411,4 +375,3 @@ switch (bedroomCount) {
       } 
     }
 }
-  
